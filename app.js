@@ -1,7 +1,4 @@
-//api key
-//aaeda40fc1524f3f9213da409da4a163-us12
-//auidence id
-//3475f4a85b
+
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -35,7 +32,7 @@ app.post("/", function (req, res) {
     ],
   };
   var jsonData = JSON.stringify(data);
-  const url = "https://us1.api.mailchimp.com/3.0/lists/3475f4a85b";
+  const url = "https://us12.api.mailchimp.com/3.0/lists/3475f4a85b";
   const options = {
     method: "POST",
     auth: "rew:aaeda40fc1524f3f9213da409da4a163-us12",

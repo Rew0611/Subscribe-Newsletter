@@ -1,5 +1,3 @@
-
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const https = require("https");
@@ -32,10 +30,10 @@ app.post("/", function (req, res) {
     ],
   };
   var jsonData = JSON.stringify(data);
-  const url = "https://us12.api.mailchimp.com/3.0/lists/3475f4a85b";
+  const url = "https://us12.api.mailchimp.com/3.0/lists/f5339663f2";
   const options = {
     method: "POST",
-    auth: "rew:aaeda40fc1524f3f9213da409da4a163-us12",
+    auth: "rew1:5c09a3e48c68662c192a44baf8a37011-us12",
   };
   const request = https.request(url, options, function (response) {
     if (response.statusCode == 200) {
@@ -55,6 +53,6 @@ app.post("/failure", function (req, res) {
   res.redirect("/");
 });
 
-app.listen(process.env.PORT||3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log("server is listening on port 3000");
 });
